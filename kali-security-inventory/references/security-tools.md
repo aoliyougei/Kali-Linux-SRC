@@ -37,13 +37,13 @@
 | httpx | `/usr/bin/httpx` | 0.28.1 | **Python HTTP 客户端 CLI，不是 ProjectDiscovery httpx** |
 | whatweb | `/usr/bin/whatweb` | 0.6.4 | 技术指纹，仅产生候选 |
 | wafw00f | `/usr/bin/wafw00f` | 2.4.2 | WAF 指纹 |
-| ffuf | `/usr/bin/ffuf` | 2.2.1 | 内容发现，≤10 RPS |
+| ffuf | `/usr/bin/ffuf` | binary 2.1.0-dev (dpkg 2.2.1-1) | 内容发现，≤10 RPS |
 | gobuster | `/usr/bin/gobuster` | 3.8.2 | 目录/DNS 枚举，明确模式与速率 |
 | dirb | `/usr/bin/dirb` | 2.22 | 目录发现 |
-| wfuzz | `/usr/bin/wfuzz` | 3.1.0 | 参数/内容模糊测试 |
+| wfuzz | `/usr/bin/wfuzz` | 3.1.0 | PycURL 未链接 OpenSSL；默认仅本地 HTTP 实验，不用于 HTTPS |
 | nikto | `/usr/bin/nikto` | 2.6.1 | Web 配置候选，必须人工复验 |
 | wpscan | `/usr/bin/wpscan` | 4.1.0 | WordPress 检查；密码审计另行确认 |
-| davtest | `/usr/bin/davtest` | 1.2 | 默认只读识别；上传测试另行确认 |
+| davtest | `/usr/bin/davtest` | 1.2 | **当前不可用**：缺少 Perl `Net::SSL`；不得临时安装依赖 |
 
 ## 注入验证
 
