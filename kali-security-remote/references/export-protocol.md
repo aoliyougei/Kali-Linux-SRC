@@ -17,6 +17,7 @@ rm -rf "$out" "$archive"
 mkdir -p "$out"
 docker cp "$c:/work/." "$out/"
 find "$out" -type f -name '*credential*' -delete
+(cd "$out" && find . -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS)
 TZ=UTC tar --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner \
   -C /tmp -czf "$archive" "kali-sec-$ENGAGEMENT_ID"
 stat -c '%s' "$archive"

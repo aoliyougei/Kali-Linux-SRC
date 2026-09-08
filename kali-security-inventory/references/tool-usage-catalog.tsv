@@ -1,0 +1,194 @@
+package	version	commands	purpose
+7zip	26.02+dfsg-2	7z,7za,7zr,p7zip	7-Zip file archiver with a high compression ratio
+aircrack-ng	1:1.7+git20230807.4bf83f1a-3	airbase-ng,aircrack-ng,airdecap-ng,airdecloak-ng,aireplay-ng,airmon-ng,airodump-ng,airodump-ng-oui-update,airolib-ng,airserv-ng,airtun-ng,airventriloquist-ng,besside-ng,besside-ng-crawler,buddy-ng,dcrack,easside-ng,ivstools,kstats,makeivs-ng,packetforge-ng,tkiptun-ng,wesside-ng,wpaclean	wireless WEP/WPA cracking utilities
+amass	5.1.1-0kali3	amass	In-depth DNS Enumeration and Network Mapping
+apache2	2.4.68-1	a2disconf,a2dismod,a2dissite,a2enconf,a2enmod,a2ensite,a2query,apache2ctl,apachectl	Apache HTTP Server
+arp-scan	1.10.0-2+b1	arp-fingerprint,arp-scan,get-iab,get-oui	arp scanning and fingerprinting tool
+atftpd	0.8.1-2	atftpd,in.tftpd	advanced TFTP server
+axel	2.17.14-4	axel	light command line download accelerator
+bind9-dnsutils	1:9.20.27-1	delv,dig,dnstap-read,mdig,nslookup,nsupdate	Clients provided with BIND 9
+binwalk	2.4.3+dfsg1-3	binwalk	tool library for analyzing binary blobs and executable code
+binwalk3	3.1.0-0kali4	binwalk3	tool library for analyzing binary blobs and executable code
+bluez	5.87-1	bluemoon,bluetoothctl,bluetoothd,btattach,btmgmt,btmon,ciptool,gatttool,hciattach,hciconfig,hcitool,hex2hcd,l2ping,l2test,mpris-proxy,obexctl,rctest,rfcomm,sdptool	Bluetooth tools and daemons
+bulk-extractor	2.1.1+git20260109.898db1-0kali3	bulk_extractor	Extracts information without parsing filesystem
+bully	1.4.00-2+b1	bully	Implementation of the WPS brute force attack, written in C
+burpsuite	2026.8-0kali1	burpsuite	platform for security testing of web applications
+cadaver	0.28+dfsg-2	cadaver	command-line WebDAV client
+certipy-ad	5.1.0-0kali1	certipy-ad	Tool for attacking AD Certificate Services
+cewl	6.2.1-1	cewl,fab-cewl	custom word list generator
+chntpw	140201-1.3	chntpw,reged,sampasswd,samunlock,samusrgrp	NT SAM password recovery utility
+cifs-utils	2:7.4-1	cifs.idmap,cifs.upcall,cifscreds,getcifsacl,mount.cifs,mount.smb3,setcifsacl,smb2-quota,smbinfo	Common Internet File System utilities
+clang	1:21.1.6-71+b1	clang,clang++,clang-cl,clang-cpp,clang-scan-deps	C, C++ and Objective-C compiler (LLVM based), clang binary
+commix	4.1-0kali1	commix	Automated All-in-One OS Command Injection and Exploitation Tool
+creddump7	0.1+git20190429-1.1	creddump7	Python tool to extract credentials and secrets from Windows registry hives
+crunch	3.6-3.1	crunch	tool for creating wordlist
+cryptcat	20031202-5kali8	cryptcat	lightweight version netcat extended with twofish encryption
+cryptsetup	2:2.8.7-1	cryptdisks_start,cryptdisks_stop,luksformat	disk encryption support - startup scripts
+cryptsetup-initramfs	2:2.8.7-1	-	disk encryption support - initramfs integration
+cryptsetup-nuke-password	9	-	Erase the LUKS keys with a special password on the unlock prompt
+davtest	1.2+git20230307.34d31db-0kali1	davtest	Testing tool for WebDAV servers
+dbd	1.50-1kali7	dbd	Netcat clone with encryption
+default-mysql-server	1.1.1	-	MySQL database server binaries and system database setup (metapackage)
+dirb	2.22+dfsg-7	dirb,dirb-gendict,html2dic	URL bruteforcing tool
+dmitry	1.3a-8	dmitry	Deepmagic Information Gathering Tool
+dns2tcp	0.5.2-4	dns2tcpc,dns2tcpd	TCP-over-DNS tunnel server and client
+dnschef	0.4+git20190327-0kali4	dnschef	DNS proxy for penetration testers
+dnsenum	1.3.2-1	dnsenum	tool to enumerate domain DNS information
+dnsrecon	1.6.0-1	dnsrecon	Powerful DNS enumeration script
+dos2unix	7.5.4-1	dos2unix,mac2unix,unix2dos,unix2mac	convert text file line endings between CRLF and LF
+enum4linux	0.9.1-0kali2	enum4linux	Enumerates info from Windows and Samba systems
+ethtool	1:7.1-1	ethtool	display or change Ethernet device settings
+evil-winrm	3.9-0kali2	evil-winrm	ultimate WinRM shell for hacking/pentesting
+exe2hexbat	1.5.1-0kali2	exe2hex	Convert EXE to bat
+exiv2	0.28.8+dfsg-1	exiv2	EXIF/IPTC/XMP metadata manipulation tool
+expect	5.45.4-8	autoexpect,autopasswd,cryptdir,decryptdir,dislocate,expect,expect8.6,expect9.0,expect_autoexpect,expect_autopasswd,expect_cryptdir,expect_decryptdir,expect_dislocate,expect_kibitz,expect_lpunlock,expect_mkpasswd,expect_multixterm,expect_passmass,expect_rftp,expect_rlogin-cwd,expect_timed-read,expect_timed-run,expect_tknewsbiff,expect_tkpasswd,expect_unbuffer,expect_weather,expect_xkibitz,expect_xpstat,kibitz,lpunlock,multixterm,passmass,rlogin-cwd,timed-read,timed-run,tknewsbiff,tkpasswd,unbuffer,xkibitz,xpstat	Automates interactive applications
+exploitdb	20260826-0kali1	exploitdb,searchsploit	Searchable Exploit Database archive
+ffuf	2.2.1-1	ffuf	Fast web fuzzer written in Go (program)
+fierce	1.6.0-2	fierce	Domain DNS scanner
+fping	5.1-1	fping,fping6	sends ICMP ECHO_REQUEST packets to network hosts
+gdisk	1.0.10-3	cgdisk,fixparts,gdisk,sgdisk	GPT fdisk text-mode partitioning tool
+git	1:2.53.0-1	git,git-receive-pack,git-shell,git-upload-archive,git-upload-pack,scalar	fast, scalable, distributed revision control system
+gobuster	3.8.2-1	gobuster	high-performance discovery tool for directories, DNS and cloud storage
+gpp-decrypt	0.1-1kali3	gpp-decrypt	Group Policy Preferences decrypter
+hash-identifier	1.2+git20180314-0kali3	hash-identifier	Tool to identify hash types
+hashcat	7.1.2+ds1-4	hashcat	World's fastest and most advanced password recovery utility
+hashcat-utils	1.10-0kali2	-	Set of small utilities for advanced password cracking
+hashdeep	4.4+git20170824+ds-1	hashdeep,md5deep,sha1deep,sha256deep,tigerdeep,whirlpooldeep	recursively compute hashsums or piecewise hashings
+hashid	3.1.4-5	hashid	Identify the different types of hashes used to encrypt data
+hotpatch	0.2-1kali4	hotpatcher	Hot patches Linux executables with .so file injection
+hping3	3.a2.ds2-11~kali1	hping3	Active Network Smashing Tool
+hydra	9.7-1	dpl4hydra,hydra,hydra-wizard,pw-inspector	very fast network logon cracker
+i2c-tools	4.4-3+b1	ddcmon,decode-dimms,decode-edid,decode-vaio,i2c-stub-from-dump,i2cdetect,i2cdump,i2cget,i2cset,i2ctransfer	heterogeneous set of I2C tools for Linux
+ifenslave	2.14	-	configure network interfaces for parallel routing (bonding)
+ike-scan	1.9.5-2	ike-scan,psk-crack	discover and fingerprint IKE hosts (IPsec VPN Servers)
+impacket-scripts	1.10	impacket-DumpNTLMInfo,impacket-Get-GPPPassword,impacket-GetADComputers,impacket-GetADUsers,impacket-GetLAPSPassword,impacket-GetNPUsers,impacket-GetUserSPNs,impacket-addcomputer,impacket-atexec,impacket-changepasswd,impacket-dacledit,impacket-dcomexec,impacket-describeTicket,impacket-dpapi,impacket-esentutl,impacket-exchanger,impacket-findDelegation,impacket-getArch,impacket-getPac,impacket-getST,impacket-getTGT,impacket-goldenPac,impacket-karmaSMB,impacket-keylistattack,impacket-lookupsid,impacket-machine_role,impacket-mimikatz,impacket-mqtt_check,impacket-mssqlclient,impacket-mssqlinstance,impacket-net,impacket-ntfs-read,impacket-ntlmrelayx,impacket-owneredit,impacket-ping,impacket-ping6,impacket-psexec,impacket-raiseChild,impacket-rbcd,impacket-rdp_check,impacket-reg,impacket-registry-read,impacket-rpcmap,impacket-sambaPipe,impacket-services,impacket-smbclient,impacket-smbexec,impacket-smbserver,impacket-sniff,impacket-sniffer,impacket-split,impacket-ticketConverter,impacket-ticketer,impacket-tstool,impacket-wmipersist,impacket-wmiquery	Links to useful impacket scripts examples
+inetsim	1.3.2+dfsg.1-8	inetsim	Software suite for simulating common internet services
+iodine	0.7.0-13	iodine,iodine-client-start,iodined	tool for tunneling IPv4 data through a DNS server
+iputils-arping		-	
+iw	6.17-1	iw	tool for configuring Linux wireless devices
+john	1.9.0-Jumbo-1+git20211102-0kali11	SIPdump,base64conv,bitlocker2john,calc_stat,cprepair,dmg2john,eapmd5tojohn,genmkvpwd,gpg2john,hccap2john,john,keepass2john,mailer,mkvcalcproba,putty2john,racf2john,rar2john,raw2dyna,tgtsnarf,uaf2john,unafs,undrop,unique,unshadow,vncpcap2john,wpapcap2john,zip2john	active password cracking tool
+kali-linux-core	2026.3.4	-	Kali's core packages
+kali-system-cli	2026.3.4	-	Kali's system CLI tools
+kismet	2025.09.R1-0kali3	-	wireless network and device detector (metapackage)
+laudanum	1.0+r36-0kali6	laudanum	Collection of injectable web files
+lbd	0.4-1kali3	lbd	Load balancer detector
+libimage-exiftool-perl	13.55+dfsg-1	exiftool	library and program to read and write meta information in multimedia files
+macchanger	1.7.0-6	macchanger	utility for manipulating the MAC address of network interfaces
+magicrescue	1.1.10+dfsg-3	dupemap,magicrescue,magicsort	recover files by looking for magic bytes
+maskprocessor	0.73+git20170609.1708898-4	mp32,mp64	high-performance word generator with a per-position configurable charset
+masscan	2:1.3.2+ds1-2	masscan	TCP port scanner
+metasploit-framework	6.5.3-0kali1	msf-egghunter,msf-exe2vba,msf-exe2vbs,msf-find_badchars,msf-halflm_second,msf-hmac_sha1_crack,msf-java_deserializer,msf-jsobfu,msf-makeiplist,msf-md5_lookup,msf-metasm_shell,msf-msf_irb_shell,msf-nasm_shell,msf-pattern_create,msf-pattern_offset,msf-pdf2xdp,msf-virustotal	Framework for exploit development and vulnerability research
+mimikatz	2.2.0-git20220919-0kali1	mimikatz	Uses admin rights on Windows to display passwords in plaintext
+minicom	2.11.1-2	ascii-xfr,minicom,runscript,xminicom	menu-driven serial communication program
+miredo	1.2.6-7.2	miredo,miredo-checkconf,teredo-mire	Teredo IPv6 tunneling through NATs
+mitmproxy	12.2.3-0kali3	mitmdump,mitmproxy,mitmweb	SSL-capable man-in-the-middle HTTP proxy
+mlocate		-	
+msfpc	1.4.5-0kali3	msfpc	MSFvenom Payload Creator (MSFPC)
+multimac	1.0.3-1kali4	multimac	Create multiple MACs on an adapter
+nasm	3.01-1	nasm,ndisasm	General-purpose x86 assembler
+nbtscan	1.7.2-3	nbtscan	scan networks searching for NetBIOS information
+ncrack	0.7+debian-6	ncrack	High-speed network authentication cracking tool
+ncurses-hexedit	0.9.7+orig-7.3	hexeditor	Edit files/disks in hex, ASCII and EBCDIC
+netdiscover	0.21-1	netdiscover	active/passive network address scanner using ARP requests
+netexec	1.5.1-0kali2	netexec,nxc,nxcdb	Network Execution Tool
+netmask	2.5.0-1	netmask	helps determine network masks
+netsed	1.4-1	netsed	network packet-altering stream editor
+netsniff-ng	0.6.9-2+b1	astraceroute,bpfc,curvetun,flowtop,ifpps,mausezahn,netsniff-ng,trafgen	Linux network packet sniffer toolkit
+ngrep	1.47+ds1-8	ngrep	grep for network traffic
+nikto	1:2.6.1-0kali1	nikto,replay	web server security scanner
+nmap	7.99+dfsg-1kali1	nmap,nping	The Network Mapper
+onesixtyone	0.3.4-1	onesixtyone	fast and simple SNMP scanner
+openvpn	2.7.5-1	openvpn	virtual private network daemon
+passing-the-hash	0~2015.12.37+b1	pth-curl,pth-net,pth-rpcclient,pth-smbclient,pth-smbget,pth-sqsh,pth-winexe,pth-wmic,pth-wmis	Patched tools to use password hashes as authentication input
+patator	1.1.0-1	patator	Multi-purpose brute-forcer
+pdf-parser	0.7.14-0kali1	pdf-parser	Parses PDF files to identify fundamental elements
+pdfid	0.2.10-0kali1	pdfid	Scans PDF files for certain PDF keywords
+peass	20260824.e872d65c-0kali1	linpeas,peass,winpeas	Privilege Escalation Awesome Scripts SUITE
+php	2:8.4+99	-	server-side, HTML-embedded scripting language (default)
+php-mysql	2:8.4+99	-	MySQL module for PHP [default]
+pipal	3.4.0-0kali1	pipal	Statistical analysis on password dumps
+pipx	1.15.0-1	pipx	execute binaries from Python packages in isolated environments
+pixiewps	1.4.2-5	pixiewps	Offline WPS bruteforce tool
+powershell	7.6.2-1.deb	pwsh	PowerShell is an automation and configuration management platform.
+powershell-empire	6.6.0-0kali1	powershell-empire,starkiller,starkiller-start,starkiller-stop	PowerShell and Python post-exploitation agent
+powersploit	3.0.0+git20200817.d943001-0kali1	powersploit	PowerShell Post-Exploitation Framework
+projectdiscovery-nuclei	v3.11.1	nuclei	Fast template-based vulnerability scanner (copied from official image)
+proxychains4	4.17-3.1	proxychains4,proxychains4-daemon	redirect connections through socks/http proxies (proxychains-ng)
+proxytunnel	1.13.0-2	proxytunnel	Help SSH and other protocols through HTTP(S) proxies
+ptunnel	0.72-4	ptunnel	Tunnel TCP connections over ICMP packets
+pwnat	0.3.0-0kali2	pwnat	NAT to NAT client-server communication
+python3-impacket	0.13.0+git20251120-9c2d8b6-0kali1	impacket-netview,impacket-rpcdump,impacket-samrdump,impacket-secretsdump,impacket-wmiexec	Python3 module to easily build and dissect network protocols
+python3-pip	26.1.2+dfsg-1	pip,pip3	Python package installer
+python3-scapy	2.7.0+dfsg1-1	scapy,scapy3	Packet generator/sniffer and network scanner/discovery (Python 3)
+python3-virtualenv	21.5.1+ds-1	virtualenv	Python virtual environment creator
+qsslcaudit	0.8.3-0kali2	qsslcaudit	test SSL/TLS clients how secure they are
+radare2	6.0.4+dfsg-1	r2,r2agent,r2pm,r2r,r2sdb,rabin2,radare2,radiff2,rafind2,ragg2,rahash2,rapatch2,rarun2,rasign2,rasm2,ravc2,rax2	free and advanced command line hexadecimal editor
+rake	13.4.2-1	rake	ruby make-like utility
+reaver	1.6.6-2+b1	reaver,wash	brute force attack tool against Wi-Fi Protected Setup PIN number
+rebind	0.3.4-1kali10	dns-rebind	DNS rebinding tool
+recon-ng	5.1.2-2	recon-cli,recon-ng,recon-web	Web Reconnaissance framework written in Python
+redsocks	0.5-2+b5	redsocks	arbitrary TCP connection redirector to a SOCKS or HTTPS proxy server
+responder	3.2.2.0-0kali1	responder,responder-BrowserListener,responder-DHCP_Auto,responder-FindSQLSrv,responder-Icmp-Redirect,responder-MultiRelay,responder-RunFinger	LLMNR/NBT-NS/mDNS Poisoner
+rfkill	2.42.2-2	rfkill	tool for enabling and disabling wireless devices
+rsmangler	1.5-0kali3	rsmangler	Wordlist mangling tool
+sakis3g	0.2.0e+git20150717-0kali2	sakis3g	Tool for establishing 3G connections
+samba	2:4.24.5+dfsg-1	eventlogadm,mvxattr,nmbd,oLschema2ldif,pdbedit,profiles,sharesec,smbd,smbstatus	SMB/CIFS file, print, and login server for Unix
+samba-common-bin	2:4.24.5+dfsg-1	dbwrap_tool,net,nmblookup,samba-log-parser,samba-regedit,smbcontrol,smbpasswd,testparm,winexe	Samba common files used by both the server and the client
+samdump2	3.0.0-8	samdump2	Dump Windows 2k/NT/XP password hashes
+sbd	1.37-1kali6	sbd	Secure backdoor for Linux and Windows
+scalpel	1.60+git20240110.6960eb2-2	scalpel	fast filesystem-independent file recovery
+screen	5.0.2-1	screen	terminal multiplexer with VT100/ANSI terminal emulation
+scrounge-ntfs	0.9-11	scrounge-ntfs	Data recovery program for NTFS filesystems
+sendemail	1.56-5.2	sendEmail,sendemail	lightweight, command line SMTP email client
+set	8.1.3+git20260604-0kali1	se-toolkit,setoolkit	Social-Engineer Toolkit
+skipfish	2.10b-2kali8	skipfish	fully automated, active web application security reconnaissance tool
+sleuthkit	4.14.0+dfsg-0kali1	blkcalc,blkcat,blkls,blkstat,fcat,ffind,fiwalk,fls,fsstat,hfind,icat,ifind,ils,img_cat,img_stat,istat,jcat,jls,jpeg_extract,mactime,mmcat,mmls,mmstat,pstat,sigfind,sorter,srch_strings,tsk_comparedir,tsk_gettimes,tsk_imageinfo,tsk_loaddb,tsk_recover,usnjls	tools for forensics analysis on volume and filesystem data
+smbmap	1.10.7-1	smbmap	handy SMB enumeration tool
+snmp	5.9.5.2+dfsg-2.1+b2	agentxtrap,encode_keychange,fixproc,snmp-bridge-mib,snmpbulkget,snmpbulkwalk,snmpcheck,snmpconf,snmpdelta,snmpdf,snmpget,snmpgetnext,snmpinform,snmpnetstat,snmpping,snmpps,snmpset,snmpstatus,snmptable,snmptest,snmptls,snmptranslate,snmptrap,snmpusm,snmpvacm,snmpwalk	SNMP (Simple Network Management Protocol) applications
+snmpcheck	1.9-0kali2	snmp-check	SNMP service enumeration tool
+snmpd	5.9.5.2+dfsg-2.1+b2	net-snmp-create-v3-user,snmpd	SNMP (Simple Network Management Protocol) agents
+socat	1.8.1.3-2	filan,procan,socat,socat-broker.sh,socat-chain.sh,socat-mux.sh,socat1	multipurpose relay for bidirectional data transfer
+spiderfoot	4.0-0kali5	spiderfoot,spiderfoot-cli	OSINT collection and reconnaissance tool
+spike	2.9-1kali11	citrix,closed_source_web_server_fuzz,dceoversmb,dltest,do_post,generic_chunked,generic_listen_tcp,generic_send_tcp,generic_send_udp,generic_web_server_fuzz,generic_web_server_fuzz2,gopherd,halflife,line_send_tcp,msrpcfuzz,msrpcfuzz_udp,ntlm2,ntlm_brute,pmspike,post_fuzz,post_spike,quake,quakeserver,sendmsrpc,ss_spike,statd_spike,sunrpcfuzz,webfuzz,x11_spike	Network protocol fuzzer
+spooftooph	0.5.2-1kali4	spooftooph	Automates spoofing or cloning Bluetooth devices
+sqlmap	1.10.8-1	sqlmap,sqlmapapi	automatic SQL injection tool
+ssldump	1.9-2	ssldump	SSLv3/TLS network protocol analyzer
+sslh	2.3.1-1	sslh,sslh-ev,sslh-select	Applicative protocol multiplexer
+sslscan	2.1.5-1	sslscan	Tests SSL/TLS enabled services to discover supported cipher suites
+sslsplit	0.5.5-3	sslsplit	transparent and scalable SSL/TLS interception
+sslyze	6.3.1-0kali3	sslyze	Fast and full-featured SSL scanner
+statsprocessor	0.11+git20160316-5	sp32,sp64	word generator based on per-position Markov chains
+stunnel4	3:5.80-1	stunnel4	Universal SSL tunnnel for network daemons - compatibility package
+swaks	20240103.0-2	swaks	SMTP command-line test tool
+tcpick	0.2.1-12	tcpick	TCP stream sniffer and connection tracker
+tcpreplay	4.5.4-1	tcpbridge,tcpcapinfo,tcpliveplay,tcpprep,tcpreplay,tcpreplay-edit,tcprewrite	Tool to replay saved tcpdump files at arbitrary speeds
+telnet	0.17+2.8-3	-	transitional dummy package for inetutils-telnet default switch
+testdisk	7.2-0.2+b1	fidentify,photorec,qphotorec,testdisk	Partition scanner and disk recovery tool, and PhotoRec file recovery tool
+tftp-hpa	5.4-2	tftp	HPA's tftp client
+thc-ipv6	3.8-2	atk6-address6,atk6-alive6,atk6-connect6,atk6-connsplit6,atk6-covert_send6,atk6-covert_send6d,atk6-denial6,atk6-detect-new-ip6,atk6-detect_sniffer6,atk6-dnsdict6,atk6-dnsrevenum6,atk6-dnssecwalk,atk6-dos-new-ip6,atk6-dump_dhcp6,atk6-dump_router6,atk6-exploit6,atk6-extract_hosts6,atk6-extract_networks6,atk6-fake_advertise6,atk6-fake_dhcps6,atk6-fake_dns6d,atk6-fake_dnsupdate6,atk6-fake_mipv6,atk6-fake_mld26,atk6-fake_mld6,atk6-fake_mldrouter6,atk6-fake_pim6,atk6-fake_router26,atk6-fake_router6,atk6-fake_solicitate6,atk6-firewall6,atk6-flood_advertise6,atk6-flood_dhcpc6,atk6-flood_mld26,atk6-flood_mld6,atk6-flood_mldrouter6,atk6-flood_redir6,atk6-flood_router26,atk6-flood_router6,atk6-flood_rs6,atk6-flood_solicitate6,atk6-flood_unreach6,atk6-four2six,atk6-fragmentation6,atk6-fragrouter6,atk6-fuzz_dhcpc6,atk6-fuzz_dhcps6,atk6-fuzz_ip6,atk6-implementation6,atk6-implementation6d,atk6-inject_alive6,atk6-inverse_lookup6,atk6-kill_router6,atk6-ndpexhaust26,atk6-ndpexhaust6,atk6-node_query6,atk6-parasite6,atk6-passive_discovery6,atk6-randicmp6,atk6-redir6,atk6-redirsniff6,atk6-rsmurf6,atk6-sendpees6,atk6-sendpeesmp6,atk6-smurf6,atk6-thcping6,atk6-thcsyn6,atk6-toobig6,atk6-toobigsniff6,atk6-trace6	The Hacker Choice's IPv6 Attack Toolkit
+thc-pptp-bruter	0.1.4-1kali5	thc-pptp-bruter	THC PPTP Brute Force
+theharvester	4.11.1-0kali1	restfulHarvest,theHarvester,theharvester	tool for gathering e-mail accounts and subdomain names from public sources
+traceroute	1:2.1.6-1	lft.db,tcptraceroute.db,traceproto.db,traceroute-nanog,traceroute.db,traceroute6.db	Traces the route taken by packets over an IPv4/IPv6 network
+udptunnel	1.1-12+b1	udptunnel	tunnel UDP packets over a TCP connection
+unar		-	
+unix-privesc-check	1.4-0kali1	unix-privesc-check	Script to check for simple privilege escalation vectors
+upx-ucl	4.2.4-1.1	upx-ucl	efficient live-compressor for executables
+vboot-kernel-utils	0~R106-15054.B+dfsg-0.1	futility,vbutil_kernel	Chrome OS verified boot utils required to sign kernels
+vboot-utils	0~R106-15054.B+dfsg-0.1	chromeos-tpm-recovery,crossystem,dev_debug_vboot,dumpRSAPublicKey,dump_fmap,dump_kernel_config,enable_dev_usb_boot,gbb_utility,tpm-nvsize,tpmc,vbutil_firmware,vbutil_key,vbutil_keyblock	Chrome OS verified u-boot utilities
+vim-nox		-	
+vlan	2.0.5+nmu3	vconfig	ifupdown legacy integration for vlan configuration
+voiphopper	2.04-1kali7	voiphopper	Runs a VLAN hop security test
+vpnc	0.5.3+git20260629-1	cisco-decrypt,pcf2vpnc,vpnc,vpnc-connect,vpnc-disconnect	Cisco-compatible VPN client
+wafw00f	2.4.2-1	wafw00f	identify and fingerprint Web Application Firewall products
+wce	1.42-beta-0kali4	wce	Windows Credentials Editor
+webshells	1.1+kali8	webshells	Collection of webshells
+weevely	4.0.2-1	weevely	Stealth tiny web shell
+wfuzz	3.1.0-6	wfuzz	Web application bruteforcer
+whatweb	0.6.4-1	whatweb	Next generation web scanner
+whois	5.6.6	mkpasswd,whois	intelligent WHOIS client
+wifite	2.8.2-1	wifite	Python script to automate wireless auditing using aircrack-ng tools
+windows-binaries	0.6.10	windows-binaries,windows-resources	Various pentesting Windows binaries
+wireshark	4.6.6-1	wireshark	network traffic analyzer - graphical interface
+wordlists	2026.2.0	wordlists	Contains the rockyou wordlist
+wpscan	4.1.0-0kali1	wpscan	Black box WordPress vulnerability scanner
+xxd	2:9.2.0858-1	xxd	tool to make (or reverse) a hex dump

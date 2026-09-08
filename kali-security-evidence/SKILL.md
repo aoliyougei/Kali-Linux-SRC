@@ -1,6 +1,6 @@
 ---
 name: kali-security-evidence
-description: Use before exporting, screenshotting, attaching, transferring, or reporting security logs, HTTP traffic, JSONL, HAR, PCAP, commands, credentials, or user data.
+description: Use when preparing to export, screenshot, attach, transfer, or report security logs, HTTP traffic, JSONL, HAR, PCAP, commands, credentials, or user data.
 ---
 
 # 安全证据卫生
