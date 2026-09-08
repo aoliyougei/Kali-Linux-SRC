@@ -1,0 +1,18 @@
+{
+  "engagement_id": "owned-lab-2026",
+  "server_alias": "user-selected-alias",
+  "image": "docker.io/aoliyougei/kali-linux-nuclei-headless:v3.11.1-2026.3.4",
+  "image_digest": "sha256:verified-on-server",
+  "container": "kali-sec-owned-lab-2026",
+  "network": "host",
+  "jobs": [
+    {
+      "job_id": "recon-001",
+      "started_at": "2026-09-08T01:00:00Z",
+      "finished_at": "2026-09-08T01:05:00Z",
+      "exit_code": 0,
+      "resume_checks": 1
+    }
+  ],
+  "credentials_recorded": false
+}

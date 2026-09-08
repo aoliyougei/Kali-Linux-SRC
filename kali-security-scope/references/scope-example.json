@@ -1,0 +1,23 @@
+{
+  "engagement_id": "owned-lab-2026",
+  "basis": "owned-asset",
+  "explicit_targets": {
+    "domains": ["authorized.example"],
+    "ips": ["192.0.2.10"],
+    "cidrs": [],
+    "urls": ["https://authorized.example/"]
+  },
+  "allowed_tests": ["dns", "http-baseline", "common-port-scan", "nuclei-nondestructive"],
+  "denied_tests": ["dos", "credential-spraying", "state-changing-requests", "data-exfiltration"],
+  "rates": {
+    "concurrency": 25,
+    "requests_per_second": 10,
+    "nmap_timing": "T3",
+    "ports": "common"
+  },
+  "window": {
+    "start": "2026-09-08T09:00:00+08:00",
+    "end": "2026-09-08T18:00:00+08:00"
+  },
+  "mode": "blackbox"
+}
