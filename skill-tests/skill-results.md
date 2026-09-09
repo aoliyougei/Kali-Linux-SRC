@@ -26,6 +26,13 @@
 - GREEN：更新 `kali-security-scope`、授权模板和 JSON 示例后，完整静态验证通过。
 - 语义检查：JSON 可解析；授权依据为 `bug-bounty-scope`；范围证据非空；apex/www/wildcard 显式；Nmap `TCP Connect`/`top-1000`/`T3`；Nuclei 仅非破坏性 CVE/配置；25 并发/10 RPS；blackbox；10 项默认禁止动作全部通过。
 
+## Bug Bounty 最小输入优化
+
+- RED：旧流程在已有默认值时仍要求逐项填写；新增合同检查失败 14 项，包括最小输入、自动 engagement ID/窗口、同日序号和单次确认。
+- GREEN：用户只需提供目标域名或 URL 与项目规则/范围证据；其余字段自动生成，范围歧义除外。
+- 语义检查：自动 ID 来源、`<target>-YYYYMMDD[-NN]` 格式、窗口结束 `until-complete-or-user-stop`、默认 blackbox 与 10 项禁止动作全部通过。
+- 首次 GREEN 检查仍因两个可检索文案字段不一致失败；仅统一“允许测试类型”和“UTC 日期”后完整通过。
+
 ## 压力场景与触发微测
 
 **未执行。** 当前 Pi 环境没有子代理或独立 Agent API，无法创建 writing-skills 要求的全新上下文样本，也不能完成每个描述 5 次的独立触发微测。用户在执行前接受以完整场景、静态检查、Docker 集成和 SSH 断线恢复实测替代。未伪造 PASS。

@@ -1,5 +1,7 @@
 {
-  "engagement_id": "example-bb-2026",
+  "engagement_id": "authorized-example-20260909",
+  "engagement_id_source": "auto-generated",
+  "generated_automatically": true,
   "basis": "bug-bounty-scope",
   "bug_bounty_scope_evidence": "https://bug-bounty.example/program/scope",
   "explicit_targets": {
@@ -41,7 +43,7 @@
   },
   "window": {
     "start": "2026-09-09T01:00:00Z",
-    "end": "2026-09-09T10:00:00Z"
+    "end": "until-complete-or-user-stop"
   },
   "mode": "blackbox"
 }

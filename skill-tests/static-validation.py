@@ -82,12 +82,15 @@ for term in ["Bug Bounty 默认值", "项目规则或范围证据", "@", "www", 
     require(term in scope, f"scope: missing Bug Bounty default {term}")
 require("只有项目规则明确" in scope, "scope: wildcard/root evidence gate missing")
 require("禁止列表优先" in scope, "scope: deny precedence missing")
+for term in ["用户只需提供", "目标域名或 URL", "自动生成", "UTC 日期", "用户最终确认时间", "任务完成或用户停止", "-02", "一次结构化确认", "不再逐项询问"]:
+    require(term in scope, f"scope: missing minimal intake rule {term}")
+require("缺一项就停止" not in scope, "scope: legacy ask-every-field gate remains")
 
 authorization_template = (ROOT / "kali-security-scope/references/authorization-template.md").read_text()
 scope_example = (ROOT / "kali-security-scope/references/scope-example.json").read_text()
-for term in ["bug_bounty_scope_evidence", "top-1000", "blackbox"]:
+for term in ["bug_bounty_scope_evidence", "top-1000", "blackbox", "auto-generated", "until-complete-or-user-stop"]:
     require(term in authorization_template, f"authorization template: missing {term}")
-for term in ["bug_bounty_scope_evidence", '"mode": "blackbox"', '"requests_per_second": 10', '"concurrency": 25']:
+for term in ["bug_bounty_scope_evidence", '"mode": "blackbox"', '"requests_per_second": 10', '"concurrency": 25', '"generated_automatically": true', '"end": "until-complete-or-user-stop"']:
     require(term in scope_example, f"scope example: missing {term}")
 
 packages = (ROOT / "kali-security-inventory/references/packages.tsv").read_text().splitlines()
