@@ -65,6 +65,16 @@ require("禁止默认 `--privileged`" in remote, "remote: privileged prohibition
 require("只有本地校验成功后才停止容器" in remote, "remote: local verification stop gate missing")
 require("不重跑、不停止、不删除" in remote, "remote: uncertain-state preservation missing")
 
+result_pattern = "security-results/YYYY-MM-DD_<scheme-host-port|multi-target>_<engagement-id>/"
+export = (ROOT / "kali-security-remote/references/export-protocol.md").read_text()
+artifacts = (ROOT / "kali-security-evidence/references/artifact-layout.md").read_text()
+reporting = (ROOT / "kali-security-reporting/SKILL.md").read_text()
+for path, text in [("remote", remote), ("export", export), ("artifacts", artifacts), ("reporting", reporting)]:
+    require(result_pattern in text, f"{path}: normalized result directory missing")
+for term in ["multi-target", "userinfo", "path", "query", "fragment"]:
+    require(term in export and term in artifacts, f"results: missing normalization rule {term}")
+require("security-results/<engagement-id>/" not in remote + export + artifacts + reporting, "results: legacy directory format remains")
+
 scope = (ROOT / "kali-security-scope/SKILL.md").read_text()
 for term in ["engagement-id", "授权依据", "精确目标", "允许测试类型", "禁止动作", "时间窗口", "blackbox", "greybox"]:
     require(term in scope, f"scope: missing {term}")

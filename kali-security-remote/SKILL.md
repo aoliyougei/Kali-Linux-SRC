@@ -38,7 +38,7 @@ auto-remove: false
 
 ## 本地导出
 
-按 `references/export-protocol.md`：先脱敏，远程 `docker cp` 与打包，分块传到本地 `security-results/<engagement-id>/`，校验本地大小和 SHA-256。**只有本地校验成功后才停止容器和清理远程临时包。** 传输中断时续传，不重扫。
+按 `references/export-protocol.md`：先脱敏，远程 `docker cp` 与打包，分块传到当前项目的 `security-results/YYYY-MM-DD_<scheme-host-port|multi-target>_<engagement-id>/`，校验本地大小和 SHA-256。**只有本地校验成功后才停止容器和清理远程临时包。** 传输中断时沿用 engagement 开始日期和原目录续传，不重命名、不重扫。
 
 ## 完成条件
 

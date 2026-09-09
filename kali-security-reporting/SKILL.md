@@ -24,6 +24,6 @@ description: Use when packaging an authorized assessment's validated findings, n
 
 每个发现使用 `references/finding-template.md`。命令可复制但必须脱敏；严重性根据已证明影响，不继承扫描器标签。报告不得包含凭据、合同正文、无必要 PII 或批量真实数据。
 
-使用 `references/report-template.md`；完整结果保存到 `security-results/<engagement-id>/`，不提交 Git。
+使用 `references/report-template.md`；完整结果保存到当前项目的 `security-results/YYYY-MM-DD_<scheme-host-port|multi-target>_<engagement-id>/`，不提交 Git。目录不得包含 URL path、query、fragment、userinfo 或凭据。
 
 方法论提炼自 [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter)，Sachin Sharma / ElementalSoul，CC BY 4.0。

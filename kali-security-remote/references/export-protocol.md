@@ -39,21 +39,23 @@ dd if="/tmp/kali-sec-$ENGAGEMENT_ID.tar.gz" bs=786432 skip="$INDEX" count=1 stat
   | base64 -w0
 ```
 
-本地保存为：
+本地保存到当前项目目录下的规范化结果目录：
 
 ```text
-security-results/<engagement-id>/.transfer/chunk-000000.b64
-security-results/<engagement-id>/.transfer/manifest.json
+security-results/YYYY-MM-DD_<scheme-host-port|multi-target>_<engagement-id>/.transfer/chunk-000000.b64
+security-results/YYYY-MM-DD_<scheme-host-port|multi-target>_<engagement-id>/.transfer/manifest.json
 ```
+
+目录日期使用 engagement 开始日期（UTC，`YYYY-MM-DD`），保证断线恢复时名称不变。单 URL 只取小写 `scheme + hostname + 非默认端口`，非字母数字字符折叠为 `-`；丢弃 userinfo、path、query、fragment，防止 Token/PII 进入文件名。默认端口 80/443 省略。例如 `https://Example.COM/api?q=secret` 变为 `2026-09-09_https-example-com_<engagement-id>`。多目标统一使用 `multi-target`。
 
 每块只有完整返回后才写入 manifest。SSH 中断时从首个缺失编号继续，不重复扫描。
 
 ## 本地合并与校验
 
-使用本地文件工具合并 Base64 文本并解码；计算本地文件大小与 SHA-256，必须与远程值完全相同。解压到：
+使用本地文件工具合并 Base64 文本并解码；计算本地文件大小与 SHA-256，必须与远程值完全相同。解压到同一规范化目录；不得在恢复时根据当前日期重新命名：
 
 ```text
-security-results/<engagement-id>/
+security-results/YYYY-MM-DD_<scheme-host-port|multi-target>_<engagement-id>/
 ```
 
 校验归档内 `SHA256SUMS`，确认没有凭据文件或明文 Cookie/Authorization/JWT/API Key。
