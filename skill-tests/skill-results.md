@@ -20,6 +20,12 @@
 - DAVTest：发现缺少 Perl `Net::SSL`，标记为 unavailable。
 - `jq`：镜像未安装；脱敏方案改为 Python 3 标准库并验证。
 
+## Bug Bounty 默认值优化
+
+- RED：扩展静态合同后运行旧 Skill，失败 18 项，包括范围证据、`@/www/*` 条件门禁、TCP Connect top-1000、非破坏性 Nuclei、默认 blackbox、禁止动作与禁止优先级。
+- GREEN：更新 `kali-security-scope`、授权模板和 JSON 示例后，完整静态验证通过。
+- 语义检查：JSON 可解析；授权依据为 `bug-bounty-scope`；范围证据非空；apex/www/wildcard 显式；Nmap `TCP Connect`/`top-1000`/`T3`；Nuclei 仅非破坏性 CVE/配置；25 并发/10 RPS；blackbox；10 项默认禁止动作全部通过。
+
 ## 压力场景与触发微测
 
 **未执行。** 当前 Pi 环境没有子代理或独立 Agent API，无法创建 writing-skills 要求的全新上下文样本，也不能完成每个描述 5 次的独立触发微测。用户在执行前接受以完整场景、静态检查、Docker 集成和 SSH 断线恢复实测替代。未伪造 PASS。

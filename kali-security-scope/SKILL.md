@@ -24,6 +24,53 @@ description: Use when starting or changing an authorized vulnerability assessmen
 
 使用 `references/authorization-template.md` 记录摘要；不要复制合同/SoW 原文。
 
+## Bug Bounty 默认值
+
+用户声明 `Bug Bounty` 时，仍必须提供 `engagement-id`、项目规则或范围证据、目标域名、测试窗口与时区。先阅读当前项目规则的 in-scope/OOS/速率条款，**只有项目规则明确**允许时才启用：
+
+- `@`：根域，如 `jiaoyu.cn`；
+- `www`：`www.jiaoyu.cn`；
+- `*`：规则明确写出的 `*.jiaoyu.cn` 通配范围。
+
+规则只允许其中一项就只纳入该项。通配符发现的新主机若匹配明确规则可进入候选清单；第三方 CNAME、项目 OOS 和规则未覆盖资产仍仅记录。
+
+未填写可选字段时使用以下默认值：
+
+```yaml
+allowed_tests:
+  dns_and_public_information: all-nondestructive
+  network_discovery:
+    scan_type: TCP Connect
+    ports: top-1000
+    nmap_timing: T3
+  web_recon:
+    - HTTP/TLS baseline
+    - soft-404
+    - technology fingerprinting
+    - low-rate content discovery
+  nuclei:
+    - 非破坏性 CVE 模板
+    - 非破坏性配置模板
+  manual_validation: read-only
+denied_tests:
+  - 登录尝试
+  - 密码喷洒和凭据填充
+  - OTP/MFA 测试
+  - 文件上传
+  - POST/PUT/PATCH/DELETE 写请求
+  - SQL 注入利用和数据提取
+  - OOB/Interactsh 回连
+  - 获取 Shell
+  - DoS/资源耗尽
+  - 批量数据读取或外传
+rates:
+  concurrency: 25
+  requests_per_second: 10
+mode: blackbox
+```
+
+默认 `blackbox`。用户明确提供测试凭据和 greybox 授权时才切换。**禁止列表优先**于允许列表、工具默认行为和/模板或扫描器标签。
+
 ## 范围规则
 
 - 通配符先解析为候选，再让用户批准明确主机清单。

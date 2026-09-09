@@ -1,23 +1,47 @@
 {
-  "engagement_id": "owned-lab-2026",
-  "basis": "owned-asset",
+  "engagement_id": "example-bb-2026",
+  "basis": "bug-bounty-scope",
+  "bug_bounty_scope_evidence": "https://bug-bounty.example/program/scope",
   "explicit_targets": {
-    "domains": ["authorized.example"],
-    "ips": ["192.0.2.10"],
+    "apex": ["authorized.example"],
+    "www": ["www.authorized.example"],
+    "wildcard": ["*.authorized.example"],
+    "ips": [],
     "cidrs": [],
-    "urls": ["https://authorized.example/"]
+    "urls": ["https://authorized.example/", "https://www.authorized.example/"]
   },
-  "allowed_tests": ["dns", "http-baseline", "common-port-scan", "nuclei-nondestructive"],
-  "denied_tests": ["dos", "credential-spraying", "state-changing-requests", "data-exfiltration"],
+  "allowed_tests": {
+    "dns_and_public_information": "all-nondestructive",
+    "network_discovery": {
+      "scan_type": "TCP Connect",
+      "ports": "top-1000",
+      "nmap_timing": "T3"
+    },
+    "web_recon": ["http-tls-baseline", "soft-404", "fingerprinting", "low-rate-content-discovery"],
+    "nuclei": ["non-destructive-cve", "non-destructive-configuration"],
+    "manual_validation": "read-only"
+  },
+  "denied_tests": [
+    "login-attempts",
+    "password-spraying-or-credential-stuffing",
+    "otp-or-mfa-testing",
+    "file-upload",
+    "state-changing-requests",
+    "sql-injection-exploitation-or-data-extraction",
+    "oob-or-interactsh",
+    "shell-access",
+    "dos-or-resource-exhaustion",
+    "bulk-data-access-or-exfiltration"
+  ],
   "rates": {
     "concurrency": 25,
     "requests_per_second": 10,
     "nmap_timing": "T3",
-    "ports": "common"
+    "ports": "top-1000"
   },
   "window": {
-    "start": "2026-09-08T09:00:00+08:00",
-    "end": "2026-09-08T18:00:00+08:00"
+    "start": "2026-09-09T01:00:00Z",
+    "end": "2026-09-09T10:00:00Z"
   },
   "mode": "blackbox"
 }

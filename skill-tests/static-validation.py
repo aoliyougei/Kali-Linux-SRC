@@ -78,6 +78,17 @@ require("security-results/<engagement-id>/" not in remote + export + artifacts +
 scope = (ROOT / "kali-security-scope/SKILL.md").read_text()
 for term in ["engagement-id", "授权依据", "精确目标", "允许测试类型", "禁止动作", "时间窗口", "blackbox", "greybox"]:
     require(term in scope, f"scope: missing {term}")
+for term in ["Bug Bounty 默认值", "项目规则或范围证据", "@", "www", "*", "top-1000", "TCP Connect", "T3", "非破坏性 CVE", "非破坏性配置", "默认 `blackbox`", "登录尝试", "SQL 注入利用", "OOB/Interactsh", "DoS/资源耗尽"]:
+    require(term in scope, f"scope: missing Bug Bounty default {term}")
+require("只有项目规则明确" in scope, "scope: wildcard/root evidence gate missing")
+require("禁止列表优先" in scope, "scope: deny precedence missing")
+
+authorization_template = (ROOT / "kali-security-scope/references/authorization-template.md").read_text()
+scope_example = (ROOT / "kali-security-scope/references/scope-example.json").read_text()
+for term in ["bug_bounty_scope_evidence", "top-1000", "blackbox"]:
+    require(term in authorization_template, f"authorization template: missing {term}")
+for term in ["bug_bounty_scope_evidence", '"mode": "blackbox"', '"requests_per_second": 10', '"concurrency": 25']:
+    require(term in scope_example, f"scope example: missing {term}")
 
 packages = (ROOT / "kali-security-inventory/references/packages.tsv").read_text().splitlines()
 executables = (ROOT / "kali-security-inventory/references/executables.tsv").read_text().splitlines()
