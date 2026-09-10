@@ -33,6 +33,15 @@
 - 语义检查：自动 ID 来源、`<target>-YYYYMMDD[-NN]` 格式、窗口结束 `until-complete-or-user-stop`、默认 blackbox 与 10 项禁止动作全部通过。
 - 首次 GREEN 检查仍因两个可检索文案字段不一致失败；仅统一“允许测试类型”和“UTC 日期”后完整通过。
 
+## 补天五类不收录问题回归
+
+- RED 1：要求 5 类默认非漏洞、平台接受性、加固目录、补天错配处置后，旧 Skills 失败 32 项。
+- RED 2：核心规则实现后，提交入口仍失败 6 项：缺少加固项模板，confirmed finding 未在 Severity 前记录 Platform Acceptance。
+- GREEN：新增 `non-reportable-findings.md`、`platform-acceptance.md`、`hardening-template.md`，并更新验证、报告、Nuclei、Web 和产物分流后，全量静态验证通过。
+- 语义回归：内容欺骗、Cookie Secure/HSTS、普通 `.htaccess`/`web.config`、TLS 1.0/1.1、无秘密 Source Map 均有 `KILL/HARDENING` 规则与新影响证据例外；5 个 QTVA 编号和 `review-reason-mismatch` 全部存在。
+- 通用范围 RED→GREEN：补充 soft-404/仅状态码、公开数据、GraphQL introspection、Open Redirect、非敏感 Clickjacking、无敏感数据 CORS、DNS-only SSRF、非关键限流、Self-XSS 的默认非漏洞判定与实际影响链例外。
+- 重报规则：平台明确不收录的原报告不得重复提交；只有全新实际安全影响证据才建立新 candidate，并从头执行授权和门禁。
+
 ## 压力场景与触发微测
 
 **未执行。** 当前 Pi 环境没有子代理或独立 Agent API，无法创建 writing-skills 要求的全新上下文样本，也不能完成每个描述 5 次的独立触发微测。用户在执行前接受以完整场景、静态检查、Docker 集成和 SSH 断线恢复实测替代。未伪造 PASS。

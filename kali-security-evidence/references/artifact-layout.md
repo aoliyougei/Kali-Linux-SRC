@@ -11,6 +11,7 @@ security-results/YYYY-MM-DD_<scheme-host-port|multi-target>_<engagement-id>/
 ├── recon/{dns,hosts,ports,http,tls}/
 ├── scans/{nuclei,nmap,web}/
 ├── findings/{confirmed,candidates,killed,retracted}/
+├── hardening/
 ├── evidence/
 ├── report.md
 └── SHA256SUMS
@@ -23,6 +24,6 @@ security-results/2026-09-09_https-example-com_acme-bb-001/
 security-results/2026-09-09_multi-target_acme-wide-001/
 ```
 
-`authorization.md` 不含合同原文；manifest 不含凭据。`commands/` 必须可复现且凭据替换为文件引用或 `<REDACTED>`。`killed/` 记录否定证据，`retracted/` 记录原信号、推翻证据、误判原因与时间。
+`authorization.md` 不含合同原文；manifest 不含凭据。`commands/` 必须可复现且凭据替换为文件引用或 `<REDACTED>`。`killed/` 记录不可报告/否定证据，`hardening/` 保存技术事实可复现但没有平台接受性或实际安全影响的加固项，`retracted/` 记录原信号、推翻证据、误判原因与时间。`hardening/` 内容不得复制到 `confirmed/`。
 
 远程归档与本地目录都应生成 SHA-256 清单。本项目 `.gitignore` 排除 `security-results/`，避免目标与客户数据进入 Git。

@@ -16,7 +16,9 @@ description: Use when running or reviewing authorized Nuclei v3 scans, templates
 3. 非破坏性模板才可自动执行；认证、fuzz、OOB、Code、写请求另行确认。
 4. Headless 使用 `-headless -system-chrome`，不下载另一个浏览器。
 5. Code 模板须审阅源码、使用 ECDSA 签名并显式 `-code`；拒绝未签名模板是正常安全行为。
-6. 每条结果按协议使用第二工具复验，不把 severity 当事实。
+6. 每条结果按协议使用第二工具复验；这只能证明技术事实，不证明平台接受性或实际安全影响，不把 severity/CWE 当漏洞结论。
+
+缺少安全头/Cookie 属性、TLS 弱协议、Source Map、配置文件暴露和内容欺骗类命中必须先查 `kali-security-validation/references/non-reportable-findings.md`，默认 `KILL/HARDENING`。
 
 停止条件：429、持续 5xx、连接异常、封禁提示、模板产生状态变化或范围漂移。
 

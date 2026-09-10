@@ -23,9 +23,9 @@ REQUIRED = {
     "kali-security-recon": ["references/dns-tools.md", "references/host-discovery.md", "references/port-scanning.md", "references/http-fingerprinting.md", "references/osint-tools.md"],
     "kali-security-web": ["references/content-discovery.md", "references/web-scanners.md", "references/api-testing.md", "references/injection-tools.md", "references/proxy-and-traffic.md"],
     "kali-security-nuclei": ["references/nuclei-cli.md", "references/templates.md", "references/headless.md", "references/code-templates.md"],
-    "kali-security-validation": ["references/finding-gates.md", "references/reproduction.md"],
+    "kali-security-validation": ["references/finding-gates.md", "references/reproduction.md", "references/non-reportable-findings.md", "references/platform-acceptance.md"],
     "kali-security-evidence": ["references/redaction.md", "references/artifact-layout.md"],
-    "kali-security-reporting": ["references/report-template.md", "references/finding-template.md"],
+    "kali-security-reporting": ["references/report-template.md", "references/finding-template.md", "references/hardening-template.md"],
     "kali-security-internal": ["references/smb-ad-tools.md", "references/credential-auditing.md", "references/restricted-tools.md"],
 }
 ATTRIBUTION = "Claude-BugHunter"
@@ -110,6 +110,37 @@ external_names = [name for name in SKILLS if name != "kali-security-internal"]
 for name in external_names:
     text = (ROOT / name / "SKILL.md").read_text()
     require(not re.search(r"自动.{0,30}kali-security-internal|kali-security-internal.{0,30}自动", text), f"{name}: auto-loads internal skill")
+
+validation = (ROOT / "kali-security-validation/SKILL.md").read_text()
+finding_gates = (ROOT / "kali-security-validation/references/finding-gates.md").read_text()
+non_reportable_path = ROOT / "kali-security-validation/references/non-reportable-findings.md"
+platform_path = ROOT / "kali-security-validation/references/platform-acceptance.md"
+non_reportable = non_reportable_path.read_text() if non_reportable_path.exists() else ""
+platform = platform_path.read_text() if platform_path.exists() else ""
+for term in ["技术事实", "平台接受性", "实际安全影响", "KILL", "HARDENING", "内容欺骗", "Secure", "HSTS", ".htaccess", "web.config", "TLS 1.0/1.1", "Source Map", "新影响证据", "不得重复提交"]:
+    require(term in validation + finding_gates + non_reportable + platform, f"validation: missing non-reportable rule {term}")
+for term in ["认证 Cookie", "会话", "有效凭据", "密钥", "私钥", "HTML", "脚本执行", "合规"]:
+    require(term in non_reportable, f"validation: missing impact exception {term}")
+for term in ["soft-404", "状态码", "公开数据", "GraphQL introspection", "Open Redirect", "Clickjacking", "CORS", "DNS-only", "限流", "Self-XSS"]:
+    require(term in non_reportable, f"validation: missing broader non-reportable class {term}")
+for term in ["补天", "review-reason-mismatch", "审核理由", "不重报"]:
+    require(term in platform, f"validation: missing platform acceptance rule {term}")
+require("平台接受性" in finding_gates and finding_gates.find("平台接受性") < finding_gates.find("严重性"), "validation: acceptance must precede severity")
+
+artifact_layout = (ROOT / "kali-security-evidence/references/artifact-layout.md").read_text()
+report_template = (ROOT / "kali-security-reporting/references/report-template.md").read_text()
+finding_template = (ROOT / "kali-security-reporting/references/finding-template.md").read_text()
+hardening_path = ROOT / "kali-security-reporting/references/hardening-template.md"
+hardening_template = hardening_path.read_text() if hardening_path.exists() else ""
+web_scanners = (ROOT / "kali-security-web/references/web-scanners.md").read_text()
+nuclei_skill = (ROOT / "kali-security-nuclei/SKILL.md").read_text()
+require("hardening/" in artifact_layout, "evidence: hardening directory missing")
+require("加固项" in report_template, "reporting: hardening section missing")
+require("Platform Acceptance" in finding_template and finding_template.find("Platform Acceptance") < finding_template.find("Severity"), "reporting: finding acceptance must precede severity")
+for term in ["Outcome: KILL", "Disposition: HARDENING", "不得重复提交", "新影响证据"]:
+    require(term in hardening_template, f"reporting: hardening template missing {term}")
+for text, name in [(web_scanners, "web scanners"), (nuclei_skill, "nuclei")]:
+    require("技术事实" in text and "实际安全影响" in text, f"{name}: fact-impact distinction missing")
 
 restricted = (ROOT / "kali-security-internal/references/restricted-tools.md").read_text().lower()
 for pattern in [r"msfvenom\s+-p", r"secretsdump[^`\n]*@", r"ntlmrelayx[^`\n]*-t", r"mimikatz\s+privilege::", r"empire\s+server"]:
